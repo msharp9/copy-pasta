@@ -21,7 +21,7 @@ To create a new repo:
 
 Navigate to the directory you keep your projects in (e.g. `~/repos/`) then run the following command. 
 ```bash
-uvx run copier copy gh:msharp9/copy-pasta $REPO_NAME
+uvx copier copy gh:msharp9/copy-pasta $REPO_NAME
 ```
 Update `$REPO_NAME`. Follow the prompts, answering questions to be used when filling out the template
 
@@ -29,7 +29,7 @@ Update `$REPO_NAME`. Follow the prompts, answering questions to be used when fil
 
 Navigate to a current python project and run:
 ```bash
-uvx run copier copy gh:msharp9/copy-pasta .
+uvx copier copy gh:msharp9/copy-pasta .
 ```
 You will be prompted to ignore or replace any conflicting files.
 
@@ -38,7 +38,7 @@ You will be prompted to ignore or replace any conflicting files.
 To update your project to get the latest updates from this template:
 
 ```bash
-uvx run copier update
+uvx copier update
 ```
 
 
