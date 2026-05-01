@@ -1,0 +1,29 @@
+[project]
+name = "{{ name }}"
+version = "0.1.0"
+description = "{{ description }}"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.7",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+pythonpath = ["{{ name }}"]
+minversion = "6.0"
+addopts = "--cov={{ name }} --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.report]
+fail_under = 80

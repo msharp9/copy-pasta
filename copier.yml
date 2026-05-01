@@ -1,0 +1,17 @@
+---
+_min_copier_version: 9.3.1
+_subdirectory: template
+
+name:
+  type: str
+  default: default_name
+  help: What is the name of your project?
+
+description:
+  type: str
+  default: Default project description
+  help: Short project description to be used in configs
+
+_skip_if_exists:
+  - tests
+  - "{{name}}"
