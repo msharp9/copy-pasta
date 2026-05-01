@@ -20,12 +20,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          copier copy --defaults --vcs-ref=HEAD . test_template
+          uv run copier copy --defaults --vcs-ref=HEAD . test_template
       - name: Lint code
         run: |
-          j2lint template --ignore S6
-          yamllint . --no-warnings
-          flake8 tests template test_template
+          uv run j2lint template --ignore S6
+          uv run yamllint . --no-warnings
       - name: Run Format and Lint Checks
         run: |
           uv run ruff check .
