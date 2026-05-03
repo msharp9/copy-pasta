@@ -5,17 +5,17 @@ description = "Copier template for Python projects"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "copier",
+    "copier>=9.15.0",
 ]
 
 [dependency-groups]
 dev = [
-    "j2lint",
-    "pytest",
-    "pytest-copie",
+    "j2lint>=1.2.0",
+    "pytest>=9.0.3",
+    "pytest-copie>=0.3.1",
     "pytest-cov>=7.1.0",
-    "ruff",
-    "yamllint",
+    "ruff>=0.15.12",
+    "yamllint>=1.38.0",
 ]
 
 [tool.ruff]

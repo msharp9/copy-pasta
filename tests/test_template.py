@@ -12,8 +12,21 @@ def test_copied_template(copie):
     # dummy_pull_request_template check requires the file to exist in the repo to compare against.
     # We will skip the comparison against a fixture and just check existence or content.
 
-    pull_request_template = result.project_dir.joinpath(".github/PULL_REQUEST_TEMPLATE.md")
-    assert pull_request_template.exists()
+    template_files = [
+        ".copier-answers.yml",
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        ".github/workflows/ci.yml",
+        ".gitignore",
+        ".pre-commit-config.yml",
+        "README.md",
+        "default_name/main.py",
+        "pyproject.toml",
+        "tests/test_main.py",
+    ]
+
+    for file_path in template_files:
+        file = result.project_dir.joinpath(file_path)
+        assert file.exists(), f"Template file {file_path} does not exist"
 
 
 def test_can_be_named_anything(copie):
