@@ -5,7 +5,7 @@ description = "Copier template for Python projects"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "copier>=9.15.0",
+    "copier>=9.15.1",
 ]
 
 [dependency-groups]
