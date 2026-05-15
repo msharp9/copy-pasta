@@ -18,9 +18,9 @@ dev = [
 line-length = 120
 
 [tool.pytest.ini_options]
-pythonpath = ["{{ name }}"]
+pythonpath = ["src"]
 minversion = "6.0"
-addopts = "--cov={{ name }} --cov-report=term-missing"
+addopts = "--cov=src --cov-report=term-missing"
 testpaths = [
     "tests",
 ]

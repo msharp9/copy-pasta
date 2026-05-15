@@ -19,7 +19,7 @@ def test_copied_template(copie):
         ".gitignore",
         ".pre-commit-config.yml",
         "README.md",
-        "default_name/main.py",
+        "src/main.py",
         "pyproject.toml",
         "tests/test_main.py",
     ]
